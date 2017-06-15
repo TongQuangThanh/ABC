@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scenario>
 	<Sheets>
-		<Sheet name="Tribo">
+		<Sheet name="Tribogenics">
 			<DataFile name="Tribogenics - ThanhTQ4.xlsx" sheet="Role" />
 			<TestIDs name="" />
 			<Keywords>
 				<Keyword name="loginTribo" />
 				<Keyword name="goToRolePage" />
-				<Keyword name="goToSubRolePage" />
+				<Keyword name="goToRoleInfoPage" />
 				<Keyword name="checkAddEditRolePage" />
 				<Keyword name="exit" />
 			</Keywords>

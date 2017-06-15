@@ -7,7 +7,7 @@
 			<Keywords>
 				<Keyword name="loginTribo" />
 				<Keyword name="goToRolePage" />
-				<Keyword name="goToSubRolePage" />
+				<Keyword name="goToRoleInfoPage" />
 				<Keyword name="checkSecurity" />
 				<Keyword name="exit" />
 			</Keywords>

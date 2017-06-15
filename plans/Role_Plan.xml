@@ -25,28 +25,31 @@
 		<!-- <scenario InSheet="Tribogenics" TestID="Tribogenics-45">Search role successfully</scenario> -->
 	</file>
 
-	<file Path="RoleCheckPagination.xml">
-		<!-- <scenario InSheet="Tribogenics" TestID="Tribogenics-56">Check pagination function</scenario> -->
+	<!-- <file Path="RoleCheckPagination.xml">
+		<scenario InSheet="Tribogenics" TestID="Tribogenics-56">Check pagination function</scenario>
 	</file>
 
 	<file Path="RoleCheckSorting.xml">
-		<!-- <scenario InSheet="Tribogenics" TestID="Tribogenics-63">Verify sorting order by Role name</scenario> -->
-	</file>
+		<scenario InSheet="Tribogenics" TestID="Tribogenics-63">Verify sorting order by Role name</scenario>
+	</file> -->
 
 	<file Path="RoleCheckNavigation.xml">	<!-- VIEW ROLE LIST -->
-		<!-- <scenario InSheet="Tribogenics" TestID="Tribogenics-38">Verify data mapping from Database to Role list</scenario>
-		<scenario InSheet="Tribogenics" TestID="Tribogenics-66">Check Role Detail navigation</scenario>
-		<scenario InSheet="Tribogenics" TestID="Tribogenics-67">Go to Add new role screen successfully</scenario>
-		<scenario InSheet="Tribogenics" TestID="Tribogenics-104">Customer Administrator can not access Add new role screen</scenario>
+		<!-- <scenario InSheet="Tribogenics" TestID="Tribogenics-38">Verify data mapping from Database to Role list</scenario> -->
+		
+		<!-- <scenario InSheet="Tribogenics" TestID="Tribogenics-66">Check Role Detail navigation</scenario>
+		<scenario InSheet="Tribogenics" TestID="Tribogenics-67">Go to Add new role screen successfully</scenario> -->
+		
+		<!-- <scenario InSheet="Tribogenics" TestID="Tribogenics-104">Customer Administrator can not access Add new role screen</scenario>
 		<scenario InSheet="Tribogenics" TestID="Tribogenics-105">Customer Administrator can not access View role list screen</scenario>
 		<scenario InSheet="Tribogenics" TestID="Tribogenics-135">Customer Administrator can not access modify existing role screen</scenario> -->
 	</file>
 
 	<file Path="RoleCheckAddEdit.xml">
 <!-- ADD NEW ROLE -->
-		<!-- <scenario InSheet="Tribogenics" TestID="Tribogenics-78">Add new role successfully</scenario> -->
-		<!-- <scenario InSheet="Tribogenics" TestID="Tribogenics-80">User add new role with blank Role name field</scenario> -->
-		<!-- <scenario InSheet="Tribogenics" TestID="Tribogenics-100">User add new role with blank Description field</scenario> -->
+		<!-- <scenario InSheet="Tribogenics" TestID="Tribogenics-78">Add new role successfully</scenario>
+		<scenario InSheet="Tribogenics" TestID="Tribogenics-80">User add new role with blank Role name field</scenario>
+		<scenario InSheet="Tribogenics" TestID="Tribogenics-100">User add new role with blank Description field</scenario> -->
+		
 		<!-- <scenario InSheet="Tribogenics" TestID="Tribogenics-329">Closing New Role Successfully Added popup</scenario> -->
 		<!-- <scenario InSheet="Tribogenics" TestID="Tribogenics-332">Go to Add New Role screen when click on Add another role on New Role Successfully Added popup</scenario> -->
 		<!-- <scenario InSheet="Tribogenics" TestID="Tribogenics-334">Go to View Role List screen when click on View Role List on New Role Successfully Added popup</scenario> -->
