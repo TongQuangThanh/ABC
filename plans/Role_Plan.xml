@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<execution-plan>
+	<aut_path>http://10.88.96.125:8110</aut_path>
+
+	<file Path="RoleCheckUI.xml">
+		<!-- <scenario InSheet="Tribogenics" TestID="Tribogenics-34">Verify UI of Role screen</scenario>
+		<scenario InSheet="Tribogenics" TestID="Tribogenics-73">Verify UI of Add New Role screen</scenario>
+		<scenario InSheet="Tribogenics" TestID="Tribogenics-107">Verify UI of Modify Existing Role screen</scenario> -->
+	</file>
+
+	<file Path="RoleCheckSecurity.xml">
+		<!-- <scenario InSheet="Tribogenics" TestID="Tribogenics-567">Check Security of view role list page</scenario>
+		<scenario InSheet="Tribogenics" TestID="Tribogenics-568">Check Security of add role page</scenario>
+		<scenario InSheet="Tribogenics" TestID="Tribogenics-569">Check Security of modify role page</scenario> -->
+	</file>
+
+	<file Path="RoleCheckExport.xml">
+		<!-- <scenario InSheet="Tribogenics" TestID="Tribogenics-41">Export to Excel file successfully</scenario>
+		<scenario InSheet="Tribogenics" TestID="Tribogenics-42">Export to PDF file successfully</scenario>
+		<scenario InSheet="Tribogenics" TestID="Tribogenics-44">Export to Excel file or PDF file unsuccessfully</scenario> -->
+	</file>
+
+	<file Path="RoleCheckSearch.xml">
+		<!-- <scenario InSheet="Tribogenics" TestID="Tribogenics-45">Search role successfully</scenario> -->
+		
+<!-- VIEW ROLE LIST -->
+		<!-- <scenario InSheet="Tribogenics" TestID="Tribogenics-38">Verify data mapping from Database to Role list</scenario>
+		<scenario InSheet="Tribogenics" TestID="Tribogenics-54">Verify data mapping from Database to Exported file</scenario>
+		<scenario InSheet="Tribogenics" TestID="Tribogenics-56">Check pagination function</scenario>
+		<scenario InSheet="Tribogenics" TestID="Tribogenics-63">Verify sorting order by Role name</scenario>
+		<scenario InSheet="Tribogenics" TestID="Tribogenics-66">Check Role Detail navigation</scenario>
+		<scenario InSheet="Tribogenics" TestID="Tribogenics-67">Go to Add new role screen successfully</scenario>
+		<scenario InSheet="Tribogenics" TestID="Tribogenics-105">Customer Administrator can not access View role list screen</scenario> -->
+	</file>
+
+	<file Path="RoleCheckAddEdit.xml">
+<!-- ADD NEW ROLE -->
+		<!-- <scenario InSheet="Tribogenics" TestID="Tribogenics-78">Add new role successfully</scenario> -->
+		<!-- <scenario InSheet="Tribogenics" TestID="Tribogenics-80">User add new role with blank Role name field</scenario> -->
+		<!-- <scenario InSheet="Tribogenics" TestID="Tribogenics-100">User add new role with blank Description field</scenario> -->
+		<!-- <scenario InSheet="Tribogenics" TestID="Tribogenics-104">Customer Administrator can not access Add new role screen</scenario> -->
+		<!-- <scenario InSheet="Tribogenics" TestID="Tribogenics-329">Closing New Role Successfully Added popup</scenario> -->
+		<!-- <scenario InSheet="Tribogenics" TestID="Tribogenics-332">Go to Add New Role screen when click on Add another role on New Role Successfully Added popup</scenario> -->
+		<!-- <scenario InSheet="Tribogenics" TestID="Tribogenics-334">Go to View Role List screen when click on View Role List on New Role Successfully Added popup</scenario> -->
+
+<!-- MODIFY EXISTING ROLE -->
+		<!-- <scenario InSheet="Tribogenics" TestID="Tribogenics-108">Modify existing role successfully</scenario>
+		<scenario InSheet="Tribogenics" TestID="Tribogenics-111">User modify existing role with blank Role name field</scenario>
+		<scenario InSheet="Tribogenics" TestID="Tribogenics-115">User modify existing role with blank Description field</scenario>
+		<scenario InSheet="Tribogenics" TestID="Tribogenics-130">User back to the Role List screen when user click on Cancel button</scenario>
+		<scenario InSheet="Tribogenics" TestID="Tribogenics-135">Customer Administrator can not access modify existing role screen</scenario> -->
+	</file>
+
+</execution-plan>

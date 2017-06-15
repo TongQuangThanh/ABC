@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><execution-plan>
+    <aut_path>http://10.88.96.125:8110/login</aut_path>
+    <file Path="UIGroupScenario.xml">
+<!--       	<scenario InSheet="Tribo" TestID="Tribogenics-13">Verify UI of Group screen</scenario> 
+      	<scenario InSheet="Tribo" TestID="Tribogenics-15">Check maximum numbers of record on Group screen</scenario> --> 
+     	<!-- <scenario InSheet="Tribo" TestID="Tribogenics-31">Check pagination function</scenario> -->   
+    </file>
+    <file Path="SearchGroupScenario.xml">
+     	<!-- <scenario InSheet="Tribo" TestID="Tribogenics-17">Check Search Group function</scenario>   -->
+    </file>
+    <file Path="CreateEditGroupScenario.xml">
+     	<!-- <scenario InSheet="Tribo" TestID="Tribogenics-26">Check Group Detail navigation</scenario>  -->
+    </file>
+    <file Path="ExportDataGroupScenario.xml">
+ 	<scenario InSheet="Tribo" TestID="Tribogenics-18">Check Export to Excel file function</scenario> 
+    <scenario InSheet="Tribo" TestID="Tribogenics-23">Check Export to PDF file function</scenario>  
+    </file>
+</execution-plan>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><Scenario>
+	<Sheets>
+		<Sheet name="Tribo">
+            <DataFile name="Tribo_TestData_Automation_SonNH32.xlsx" sheet="Group"/>
+            <TestIDs name=""/>
+            <Keywords>
+                <Keyword name="loginTribo"/>
+                <Keyword name="goToGroupPage"/>
+                <Keyword name="checkUIOnGroupPage"/>
+            </Keywords>
+        </Sheet>
+ 
+	</Sheets>
+</Scenario>
