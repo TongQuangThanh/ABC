@@ -8,7 +8,7 @@
 				<Keyword name="loginTribo" />
 				<Keyword name="goToRolePage" />
 				<Keyword name="goToSubRolePage" />
-				<Keyword name="checkSecurity" />
+				<Keyword name="checkUIRolePage" />
 				<Keyword name="exit" />
 			</Keywords>
 		</Sheet>

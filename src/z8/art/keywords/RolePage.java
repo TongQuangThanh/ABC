@@ -1,8 +1,10 @@
 package z8.art.keywords;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.server.handler.GetCurrentUrl;
 
 import z8.art.common.Global;
 import z8.art.dal.ExcelData;
@@ -78,22 +80,34 @@ public class RolePage extends ProviderPages {
 	
 	@KeywordInfo(Description = "Add or edit role")
 	public void checkAddEditRolePage() {
+/*Check add page or edit page to clear text*/
 		if (!ExcelData.getCellValue("Go to edit role page").equals("")) {
 			clearText("RolePage.AddEditRole.Name");
 			clearText("RolePage.AddEditRole.Description");
 		}
-		
+/*type text*/
 		if (!ExcelData.getCellValue("Input role name").equals(""))
 			typeText("RolePage.AddEditRole.Name", ExcelData.getCellValue("Input role name"));
 
 		if (!ExcelData.getCellValue("Input role description").equals(""))
 			typeText("RolePage.AddEditRole.Description", ExcelData.getCellValue("Input role description"));
-
+/*click save*/
 		if (!ExcelData.getCellValue("Click on save button").equals(""))
 		click("RolePage.AddEditRole.Button_Save");
-
+/*click cancel*/
 		if (!ExcelData.getCellValue("Click on cancel button").equals(""))
 			click("RolePage.AddEditRole.Button_Cancel");
+/*verify action*/
+		if (!ExcelData.getCellValue("Verify message").equals(""))
+			checkDisplayed("RolePage.AddEditRole.Message");
+	}
+	
+	@KeywordInfo(Description = "Check Security")
+	public void checkSecurity() {
+		String url = Global.webDriver.getCurrentUrl();
+		System.out.println(url);
+		navigate(url);
+		checkDisplayed("LoginPage.Username_Text");
 	}
 
 }
