@@ -1,8 +1,7 @@
 package z8.art.keywords;
 
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.chrome.ChromeDriver;
 import z8.art.common.Global;
 import z8.art.dal.ExcelData;
 import z8.art.object.KeywordInfo;
@@ -64,45 +63,82 @@ public class RolePage extends ProviderPages {
 	
 	@KeywordInfo(Description = "Add or edit role")
 	public void checkAddEditRolePage() {
-/*Check add page or edit page to clear text*/
-		if (!ExcelData.getCellValue("Go to edit role page").equals("")) {
+		String nameCell = ExcelData.getCellValue("Input role name");
+		String descCell = ExcelData.getCellValue("Input role description");
+		if (nameCell.equals("Not required"))
 			clearText("RolePage.AddEditRole.Name");
+		if (descCell.equals("Not required"))
 			clearText("RolePage.AddEditRole.Description");
-		}
 /*type text*/
-		typeText("RolePage.AddEditRole.Name", ExcelData.getCellValue("Input role name"));
-		typeText("RolePage.AddEditRole.Description", ExcelData.getCellValue("Input role description"));
+		if (!nameCell.equals("Not required"))
+			typeText("RolePage.AddEditRole.Name", "Input role name");
+		
+		if (!descCell.equals("Not required"))
+			typeText("RolePage.AddEditRole.Description", "Input role description");
 /*click save*/
-		if (!ExcelData.getCellValue("Click on save button").equals(""))
-		click("RolePage.AddEditRole.Button_Save");
+		if (ExcelData.getCellValue("Click on save button").equals(Yes))
+			click("RolePage.AddEditRole.Button_Save");
 /*click cancel*/
-		if (!ExcelData.getCellValue("Click on cancel button").equals(""))
-			click("RolePage.AddEditRole.Button_Cancel");
+		if (ExcelData.getCellValue("Click on cancel button").equals(Yes))
+			click("RolePage.EditRole.Button_Cancel");
 /*verify action*/
-		if (ExcelData.getCellValue("Verify message").equals("Success")){
-			checkDisplayed("RolePage.AddEditRole.Message");
-		}else if (ExcelData.getCellValue("Verify message").equals("Fail")){
-			
+		if (ExcelData.getCellValue("Verify popup title").equals("Displayed"))
+			checkDisplayed("RolePage.AddRole.Popup.Title");
+
+		if (ExcelData.getCellValue("Verify notify message success").equals(Yes))
+			checkDisplayed("RolePage.AddEditRole.SuccessMessage");
+
+		if (ExcelData.getCellValue("Verify notify message fail").equals(Yes))
+			checkDisplayed("RolePage.AddEditRole.FailMessage");
+
+		if (ExcelData.getCellValue("Verify error title").equals("Displayed"))
+			checkDisplayed("RolePage.AddEditRole.ErrorTitle");
+/*Check navigation after add/edit */
+		if(ExcelData.getCellValue("Click on close popup").equals(Yes)){
+			click("RolePage.AddRole.Popup.Close");
+			checkNotDisplayed("RolePage.AddRole.Popup.Title");
+		}
+		if(ExcelData.getCellValue("Click on add other role").equals(Yes)){
+			click("RolePage.AddRole.Popup.AddMore");
+			checkNotDisplayed("RolePage.AddRole.Popup.Title");
+		}
+		if(ExcelData.getCellValue("Click on view role list").equals(Yes)){
+			click("RolePage.AddRole.Popup.RoleList");
+			checkDisplayed("RolePage.Title");
 		}
 	}
+
+	/*@KeywordInfo(Description = "Check action after Add/Edit Role successfully")
+	public void navigateAfterAddEdit() {
+		if(ExcelData.getCellValue("Click on close popup").equals(Yes)){
+			click("RolePage.AddRole.Popup.Close");
+			checkNotDisplayed("RolePage.AddRole.Popup.Close");
+		}
+		if(ExcelData.getCellValue("Click on add other role").equals(Yes)){
+			click("RolePage.AddRole.Popup.AddMore");
+			checkNotDisplayed("RolePage.AddRole.Popup.AddMore");
+		}
+		if(ExcelData.getCellValue("Click on view role list").equals(Yes)){
+			click("RolePage.AddRole.Popup.RoleList");
+			checkDisplayed("RolePage.Title");
+		}
+	}*/
 	
 	@KeywordInfo(Description = "Check Security")
 	public void checkSecurity() {
 		String url = Global.webDriver.getCurrentUrl();
-		System.out.println(url);
-		WebDriver newDriver = null;
-		newDriver.get(url);
+		WebDriver newDriver = new ChromeDriver();
+		newDriver.navigate().to(url);
+		String newWindow = newDriver.getWindowHandle();
+		newDriver.switchTo().window(newWindow);
+		//switchToWindow(2);
 		checkDisplayed("LoginPage.Username_Text");
 	}
 
 	@KeywordInfo(Description = "Check Pagination")
 	public void checkPagination() {
-		String url = Global.webDriver.getCurrentUrl();
-		System.out.println(url);
-		Actions actions = new Actions(Global.webDriver);
-		actions.sendKeys(Keys.CONTROL + "n").build().perform();
-		navigate(url);
-		checkDisplayed("LoginPage.Username_Text");
+		
+		
 	}
 
 	@KeywordInfo(Description = "Check Sorting")

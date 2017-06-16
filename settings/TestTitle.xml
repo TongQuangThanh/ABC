@@ -19,15 +19,15 @@
         <file Updated="1484918271255">ART Test Data - RESTFulService.xlsx</file>
         <file Updated="1495769674037">~$ART Test Data - NewPratice.xlsx</file>
         <file Updated="1496892588191">~$Tribo - GroupPage.xlsx</file>
-        <file Updated="1478858323765">~$ART Test Data - WordPress.xlsx</file>
         <file Updated="1495767031493">Test Data - IntelliVU.xlsx</file>
+        <file Updated="1478858323765">~$ART Test Data - WordPress.xlsx</file>
         <file Updated="1495767031493">ART Test Data - IntelliVU.xlsx</file>
         <file Updated="1496892430531">Tribo - GroupPage.xlsx</file>
         <file Updated="1497497897752">~$Tribogenics - ThanhTQ4.xlsx</file>
-        <file Updated="1497258575959">Tribo - RolePage.xlsx</file>
         <file Updated="1484918271255">ART Test Data - RESTFul WebService.xlsx</file>
-        <file Updated="1495769522300">ART Test Data - NewPratice.xlsx</file>
+        <file Updated="1497258575959">Tribo - RolePage.xlsx</file>
         <file Updated="1497490953065">Tribogenics - ThanhTQ4.xlsx</file>
+        <file Updated="1495769522300">ART Test Data - NewPratice.xlsx</file>
     </files>
     <tests>
         <test ID="Jira-4"/>
@@ -612,14 +612,14 @@ can not access into Group screen</test>
         <test ID="Role-36">Check Cancel button</test>
         <test ID="Role-35">Modify group successfully</test>
         <test ID="Role-34">Check UI of Modify Group screen</test>
-        <test ID="Role-33">Check Security</test>
         <test ID="Jira-9"/>
-        <test ID="Jira-8"/>
+        <test ID="Role-33">Check Security</test>
         <test ID="Role-32">Operator user can not access Add New Group screen</test>
-        <test ID="Role-31">Return to Group List</test>
+        <test ID="Jira-8"/>
         <test ID="Jira-7"/>
-        <test ID="Role-30">Add Another Group</test>
+        <test ID="Role-31">Return to Group List</test>
         <test ID="Jira-6"/>
+        <test ID="Role-30">Add Another Group</test>
         <test ID="Jira-5"/>
     </tests>
 </test-id-title>
